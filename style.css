@@ -1036,8 +1036,15 @@ a.device-laptop--link {
 @media (max-width: 860px) {
   .device-mockup-group--wide {
     padding: 0 20px;
-    margin-bottom: -20px;
+    margin-bottom: 20px;
   }
   .device-mockup-group--wide .device-laptop { width: 70%; }
   .device-mockup-group--wide .device-phone { width: 20%; margin-left: -8%; }
+}
+
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
 }
