@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camryn Hatch — Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<a href="#hero" class="skip-nav">Skip to content</a>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">Camryn Hatch</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <svg class="nav-toggle-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Stem -->
+      <line class="toggle-stem" x1="16" y1="6" x2="16" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <!-- Left leaf -->
+      <path class="toggle-leaf toggle-leaf--left" d="M16 13 C12 9 6 9 6 13 C6 17 12 17 16 13Z" fill="currentColor" opacity="0.7"/>
+      <!-- Right leaf -->
+      <path class="toggle-leaf toggle-leaf--right" d="M16 21 C20 17 26 17 26 21 C26 25 20 25 16 21Z" fill="currentColor" opacity="0.7"/>
+    </svg>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="work.html">All projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-left">
+    <p class="hero-greeting">Web Developer &amp; Creator</p>
+    <h1 class="hero-name">Building things<br>that <em>grow.</em></h1>
+    <p class="hero-tagline">
+      Websites with roots. Crafted with intention, built to last, and designed to actually mean something.
+    </p>
+    <a href="#projects" class="hero-cta">
+      See my work
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <svg class="botanical-art" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M210 480 C210 400 198 320 210 220 C218 150 202 90 210 30" stroke="#3D5C42" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M210 290 C168 268 126 244 96 204 C86 188 92 166 108 167 C140 168 176 206 210 250" fill="#6B8F6E" opacity="0.55"/>
+      <path d="M210 290 C172 274 140 254 118 228" stroke="#3D5C42" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M210 230 C252 204 298 178 322 142 C332 126 326 106 311 110 C280 116 248 152 210 198" fill="#3D5C42" opacity="0.48"/>
+      <path d="M210 230 C250 210 284 186 308 160" stroke="#2A3D2E" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M210 350 C184 336 156 326 136 306 C128 294 132 282 142 284 C164 288 186 316 210 338" fill="#6B8F6E" opacity="0.42"/>
+      <path d="M210 160 C234 146 258 132 272 112 C278 102 274 92 264 94 C244 98 226 118 210 142" fill="#3D5C42" opacity="0.38"/>
+      <circle cx="210" cy="58" r="7" fill="#C8943A" opacity="0.85"/>
+      <circle cx="198" cy="40" r="5.5" fill="#E8B86D" opacity="0.75"/>
+      <circle cx="224" cy="38" r="4.5" fill="#C8943A" opacity="0.65"/>
+      <circle cx="214" cy="26" r="5" fill="#E8B86D" opacity="0.7"/>
+      <circle cx="202" cy="24" r="3.5" fill="#C8943A" opacity="0.55"/>
+      <circle cx="220" cy="18" r="3" fill="#E8B86D" opacity="0.5"/>
+      <g transform="translate(308,185) rotate(-18)">
+        <ellipse cx="0" cy="0" rx="10" ry="6.5" fill="#E8B86D"/>
+        <path d="M-6 -3 Q0 -7 6 -3 Q10 0 6 4 Q0 7 -6 4 Q-10 1 -6 -3Z" fill="#C8943A" opacity="0.45"/>
+        <line x1="-4" y1="-6" x2="-4" y2="6" stroke="#2A3D2E" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+        <line x1="3" y1="-6" x2="3" y2="7" stroke="#2A3D2E" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+        <ellipse cx="-5" cy="-10" rx="8" ry="4.5" fill="white" opacity="0.55" transform="rotate(-18 -5 -10)"/>
+        <ellipse cx="5" cy="-10" rx="8" ry="4.5" fill="white" opacity="0.55" transform="rotate(18 5 -10)"/>
+        <path d="M-3 -7 Q-8 -15 -11 -18" stroke="#2A3D2E" stroke-width="1" stroke-linecap="round"/>
+        <path d="M3 -7 Q8 -15 11 -18" stroke="#2A3D2E" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="-11" cy="-18" r="1.5" fill="#2A3D2E"/>
+        <circle cx="11" cy="-18" r="1.5" fill="#2A3D2E"/>
+      </g>
+      <path d="M210 455 C200 434 182 428 170 414" stroke="#6B8F6E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      <path d="M210 455 C220 432 240 426 252 412" stroke="#6B8F6E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      <circle cx="148" cy="390" r="3" fill="#C8943A" opacity="0.25"/>
+      <circle cx="278" cy="356" r="2" fill="#6B8F6E" opacity="0.35"/>
+      <circle cx="292" cy="412" r="4" fill="#C8943A" opacity="0.18"/>
+      <circle cx="128" cy="316" r="2" fill="#6B8F6E" opacity="0.28"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="eyebrow">Who I am</p>
+      <h2 class="section-heading">Rooted in craft,<br>driven by <em>community.</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body reveal reveal-d1">
+        <p>
+          Hey, I'm <strong>Camryn</strong>. I'm a web developer in Plant City, FL, and I build websites for local businesses. That's the short version. The longer version is that I really, genuinely care about the people I work with and the businesses they're building.
+        </p>
+        <p>
+          I think most people have had the experience of paying for a website and then never hearing from their developer again. That's not how I work. I stick around. I'm constantly tweaking, improving, watching what's working and what's not. SEO is a huge part of what I do, and I take it seriously from both sides: the technical stuff like structured data and site architecture, and the human side like understanding what real people are actually searching for. I want my clients showing up where it matters.
+        </p>
+        <p>
+          I'm also really passionate about accessibility. I build every site to WCAG AA standards, not because it checks a box, but because the internet should work for everyone. A more accessible world is just a better world, full stop.
+        </p>
+        <p>
+          When I'm not building for clients, I'm working on my own stuff. I run a custom LED night light business, I do fun side projects like themed party invitation sites, and I spend a lot of time outside with my plants and bees. Basically, I like making things grow, whether that's a business, a garden, or a weird idea I had at 2 a.m.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about-portrait-bg">
+    <img src="assets/camryn.jpg" alt="" aria-hidden="true" loading="lazy">
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="projects-header reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-heading">Things I've <em>made.</em></h2>
+    </div>
+
+    <!-- PROJECT 1: 505 Party -->
+    <div class="project-entry reveal">
+      <div class="project-meta">
+        <div class="project-number">01</div>
+        <div class="project-name">505 Party</div>
+        <div class="project-tags">
+          <span class="project-tag">Just for fun</span>
+        </div>
+        <a href="https://505party.com/" target="_blank" class="project-link-btn">
+          Visit site
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="project-content">
+        <a href="https://505party.com/" target="_blank" aria-label="Visit 505 Party website" class="project-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #3d2b1f 100%);">
+          <div class="project-visual-inner">
+            <div class="device-mockup-group device-mockup-group--wide">
+              <div class="device-laptop">
+                <div class="laptop-screen">
+                  <img src="assets/screenshots/505-pc.png" alt="505 Party desktop view" loading="lazy">
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="assets/screenshots/505-phone.png" alt="505 Party mobile view" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <p class="project-description">
+          This one was just for fun. We love hosting parties, and for this one we went all out with a retro theme. Guests got physical mailed invitations with a password hint ("who lives in a pineapple under the sea?"), and they had to answer it on the site to unlock the party details. Retro games, themed food, the whole thing.
+        </p>
+        <div class="project-breakdown">
+          <div class="breakdown-title">What I did</div>
+          <div class="breakdown-text">
+            Built the whole site around the retro concept. The password gate, the reveal, the aesthetic. I wanted the website to feel like part of the party itself, not just a page with an address on it. The mailed invite and the site were designed to work together as one experience.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: LED 62 -->
+    <div class="project-entry reveal">
+      <div class="project-meta">
+        <div class="project-number">02</div>
+        <div class="project-name">LED 62 — Lumi Lights</div>
+        <div class="project-tags">
+          <span class="project-tag">My baby</span>
+        </div>
+        <a href="https://led62.com/" target="_blank" class="project-link-btn">
+          Visit site
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="project-content">
+        <a href="https://led62.com/" target="_blank" aria-label="Visit LED 62 website" class="project-visual" style="background: linear-gradient(135deg, #c9d6ff 0%, #e2d9f3 50%, #ffd6e7 100%);">
+          <div class="project-visual-inner">
+            <div class="device-mockup-group device-mockup-group--wide">
+              <div class="device-laptop">
+                <div class="laptop-screen">
+                  <img src="assets/screenshots/led62-pc.png" alt="LED 62 desktop view" loading="lazy">
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="assets/screenshots/led62-phone.png" alt="LED 62 mobile view" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <p class="project-description">
+          This is my own business. I design and make custom acrylic LED night lights (Lumi Lights) and sell them at comic conventions and online. The site needed to feel the way the lights feel: dreamy, soft, a little anime-inspired. Like something from another world.
+        </p>
+        <div class="project-breakdown">
+          <div class="breakdown-title">What I did</div>
+          <div class="breakdown-text">
+            Everything. Design, development, e-commerce through Square, product photography direction, all the product copy, and ongoing performance work like image compression and Lighthouse optimization. This one is personal, so it gets the most attention.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: Southern Heat & AC -->
+    <div class="project-entry reveal">
+      <div class="project-meta">
+        <div class="project-number">03</div>
+        <div class="project-name">Southern Heat &amp; AC</div>
+        <div class="project-tags">
+          <span class="project-tag">Local love</span>
+        </div>
+        <a href="https://southernheatandac.com/" target="_blank" class="project-link-btn">
+          Visit site
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="project-content">
+        <a href="https://southernheatandac.com/" target="_blank" aria-label="Visit Southern Heat and AC website" class="project-visual" style="background: linear-gradient(135deg, #1c3a5e 0%, #2d6a9f 100%);">
+          <div class="project-visual-inner">
+            <div class="device-mockup-group device-mockup-group--wide">
+              <div class="device-laptop">
+                <div class="laptop-screen">
+                  <img src="assets/screenshots/southern-pc.png" alt="Southern Heat & AC desktop view" loading="lazy">
+                </div>
+                <div class="laptop-base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <img src="assets/screenshots/southern-phone.png" alt="Southern Heat & AC mobile view" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <p class="project-description">
+          A local HVAC company that needed to actually show up when people search for AC repair in their area. The client had a strong color vision I wasn't sure about at first, but once it came together I loved it. This project is a great example of what SEO can do — you're not paying for ads, you're investing in showing up organically.
+        </p>
+        <div class="project-breakdown">
+          <div class="breakdown-title">What I did</div>
+          <div class="breakdown-text">
+            Built the full site with accessibility baked in from the start. The big win here is SEO — we got them ranking for "AC repair" in their area and it's driven a real boost in call volume. Built out local SEO landing pages, handled structured data and indexing issues, and set the client up with a Looker Studio dashboard so he can track performance without digging through Search Console. I'm still actively maintaining and improving this one.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-wrap">
+    <div class="contact-inner reveal">
+      <p class="eyebrow">Let's connect</p>
+      <h2 class="section-heading">Got something<br><em>growing?</em></h2>
+      <a href="mailto:camryn@premiummediafl.com" class="contact-email">camryn@premiummediafl.com</a>
+      <p class="contact-sub">Always down for a good project, a fun collab, or just talking shop.</p>
+      <div class="social-row">
+        <a href="#" class="social-link">Follow me on Instagram</a>
+      </div>
+    </div>
+  </div>
+  <svg class="deco-leaf" width="340" height="340" viewBox="0 0 300 300" fill="none">
+    <path d="M280 280 C200 200 100 180 20 20 C20 20 180 60 280 280Z" fill="#2A3D2E"/>
+  </svg>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>&#169; <span id="yr"></span> Camryn Hatch</span>
+  <span>Built with care &#127807;</span>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Cursor
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  dot.style.left = mx + 'px';
+  dot.style.top = my + 'px';
+});
+
+(function animateRing() {
+  rx += (mx - rx) * 0.1;
+  ry += (my - ry) * 0.1;
+  ring.style.left = rx + 'px';
+  ring.style.top = ry + 'px';
+  requestAnimationFrame(animateRing);
+})();
+
+document.querySelectorAll('a, .project-entry').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Nav: go light on dark backgrounds
+const nav = document.getElementById('mainNav');
+const darkSections = document.querySelectorAll('#about');
+
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      nav.classList.add('nav-light');
+    } else {
+      const anyDark = Array.from(darkSections).some(s => s.classList.contains('in-view'));
+      if (!anyDark) nav.classList.remove('nav-light');
+    }
+    entry.target.classList.toggle('in-view', entry.isIntersecting);
+  });
+}, { threshold: 0.1 });
+
+darkSections.forEach(s => navObserver.observe(s));
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('nav-open');
+  navToggle.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+  document.body.classList.toggle('nav-locked', isOpen);
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('nav-open');
+    navToggle.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', false);
+    document.body.classList.remove('nav-locked');
+  });
+});
+</script>
+</body>
+</html>
