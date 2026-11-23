@@ -3,7 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camryn Hatch — Web Developer</title>
+<title>Camryn Hatch — Web Developer in Plant City, FL</title>
+<meta name="description" content="Camryn Hatch is a web developer in Plant City, FL building accessible, SEO-focused websites for local businesses across Tampa Bay, with ongoing support after launch.">
+<link rel="canonical" href="https://camrynhatch.com/">
+<meta name="theme-color" content="#2A3D2E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://camrynhatch.com/">
+<meta property="og:title" content="Camryn Hatch — Web Developer in Plant City, FL">
+<meta property="og:description" content="Accessible, SEO-focused websites for local businesses across Tampa Bay.">
+<meta property="og:image" content="https://camrynhatch.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Camryn Hatch",
+  "url": "https://camrynhatch.com/",
+  "jobTitle": "Web Developer",
+  "email": "mailto:camryn@premiummediafl.com",
+  "image": "https://camrynhatch.com/assets/camryn.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Plant City",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "worksFor": { "@type": "Organization", "name": "Premium Media FL", "url": "https://premiummediafl.com/" },
+  "knowsAbout": ["Web development", "Local SEO", "Technical SEO", "Web accessibility", "WCAG"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,13 +48,13 @@
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<a href="#hero" class="skip-nav">Skip to content</a>
+<a href="#main" class="skip-nav">Skip to content</a>
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#" class="nav-logo">Camryn Hatch</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <svg class="nav-toggle-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <a href="#hero" class="nav-logo">Camryn Hatch</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="nav-toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Stem -->
       <line class="toggle-stem" x1="16" y1="6" x2="16" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       <!-- Left leaf -->
@@ -35,6 +71,8 @@
   </ul>
 </nav>
 
+<main id="main" tabindex="-1">
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg-circle"></div>
@@ -46,14 +84,14 @@
     </p>
     <a href="#projects" class="hero-cta">
       See my work
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
   </div>
 
   <div class="hero-right">
-    <svg class="botanical-art" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="botanical-art" aria-hidden="true" focusable="false" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M210 480 C210 400 198 320 210 220 C218 150 202 90 210 30" stroke="#3D5C42" stroke-width="2.2" stroke-linecap="round"/>
       <path d="M210 290 C168 268 126 244 96 204 C86 188 92 166 108 167 C140 168 176 206 210 250" fill="#6B8F6E" opacity="0.55"/>
       <path d="M210 290 C172 274 140 254 118 228" stroke="#3D5C42" stroke-width="1.2" stroke-linecap="round"/>
@@ -114,7 +152,7 @@
     </div>
   </div>
   <div class="about-portrait-bg">
-    <img src="assets/camryn.jpg" alt="" aria-hidden="true" loading="lazy">
+    <img src="assets/camryn.webp" alt="" width="1000" height="1776" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -130,29 +168,29 @@
     <div class="project-entry reveal">
       <div class="project-meta">
         <div class="project-number">01</div>
-        <div class="project-name">505 Party</div>
+        <h3 class="project-name">505 Party</h3>
         <div class="project-tags">
           <span class="project-tag">Just for fun</span>
         </div>
-        <a href="https://505party.com/" target="_blank" class="project-link-btn">
-          Visit site
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://505party.com/" target="_blank" rel="noopener" class="project-link-btn">
+          Visit site<span class="sr-only"> (opens in new tab)</span>
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="project-content">
-        <a href="https://505party.com/" target="_blank" aria-label="Visit 505 Party website" class="project-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #3d2b1f 100%);">
+        <a href="https://505party.com/" target="_blank" rel="noopener" aria-label="Visit 505 Party website (opens in new tab)" class="project-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #3d2b1f 100%);">
           <div class="project-visual-inner">
             <div class="device-mockup-group device-mockup-group--wide">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/505-pc.png" alt="505 Party desktop view" loading="lazy">
+                  <img src="assets/screenshots/505-pc.webp" width="1200" height="750" alt="505 Party desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/505-phone.png" alt="505 Party mobile view" loading="lazy">
+                  <img src="assets/screenshots/505-phone.webp" width="375" height="812" alt="505 Party mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -174,29 +212,29 @@
     <div class="project-entry reveal">
       <div class="project-meta">
         <div class="project-number">02</div>
-        <div class="project-name">LED 62 — Lumi Lights</div>
+        <h3 class="project-name">LED 62 — Lumi Lights</h3>
         <div class="project-tags">
           <span class="project-tag">My baby</span>
         </div>
-        <a href="https://led62.com/" target="_blank" class="project-link-btn">
-          Visit site
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://led62.com/" target="_blank" rel="noopener" class="project-link-btn">
+          Visit site<span class="sr-only"> (opens in new tab)</span>
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="project-content">
-        <a href="https://led62.com/" target="_blank" aria-label="Visit LED 62 website" class="project-visual" style="background: linear-gradient(135deg, #c9d6ff 0%, #e2d9f3 50%, #ffd6e7 100%);">
+        <a href="https://led62.com/" target="_blank" rel="noopener" aria-label="Visit LED 62 website (opens in new tab)" class="project-visual" style="background: linear-gradient(135deg, #c9d6ff 0%, #e2d9f3 50%, #ffd6e7 100%);">
           <div class="project-visual-inner">
             <div class="device-mockup-group device-mockup-group--wide">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/led62-pc.png" alt="LED 62 desktop view" loading="lazy">
+                  <img src="assets/screenshots/led62-pc.webp" width="1200" height="750" alt="LED 62 desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/led62-phone.png" alt="LED 62 mobile view" loading="lazy">
+                  <img src="assets/screenshots/led62-phone.webp" width="375" height="812" alt="LED 62 mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -218,29 +256,29 @@
     <div class="project-entry reveal">
       <div class="project-meta">
         <div class="project-number">03</div>
-        <div class="project-name">Southern Heat &amp; AC</div>
+        <h3 class="project-name">Southern Heat &amp; AC</h3>
         <div class="project-tags">
           <span class="project-tag">Local love</span>
         </div>
-        <a href="https://southernheatandac.com/" target="_blank" class="project-link-btn">
-          Visit site
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://southernheatandac.com/" target="_blank" rel="noopener" class="project-link-btn">
+          Visit site<span class="sr-only"> (opens in new tab)</span>
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
       <div class="project-content">
-        <a href="https://southernheatandac.com/" target="_blank" aria-label="Visit Southern Heat and AC website" class="project-visual" style="background: linear-gradient(135deg, #1c3a5e 0%, #2d6a9f 100%);">
+        <a href="https://southernheatandac.com/" target="_blank" rel="noopener" aria-label="Visit Southern Heat and AC website (opens in new tab)" class="project-visual" style="background: linear-gradient(135deg, #1c3a5e 0%, #2d6a9f 100%);">
           <div class="project-visual-inner">
             <div class="device-mockup-group device-mockup-group--wide">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/southern-pc.png" alt="Southern Heat & AC desktop view" loading="lazy">
+                  <img src="assets/screenshots/southern-pc.webp" width="1200" height="750" alt="Southern Heat & AC desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/southern-phone.png" alt="Southern Heat & AC mobile view" loading="lazy">
+                  <img src="assets/screenshots/southern-phone.webp" width="375" height="812" alt="Southern Heat & AC mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -258,6 +296,15 @@
       </div>
     </div>
 
+    <div class="projects-more reveal">
+      <a href="work.html" class="hero-cta">
+        See all projects
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -269,15 +316,19 @@
       <h2 class="section-heading">Got something<br><em>growing?</em></h2>
       <a href="mailto:camryn@premiummediafl.com" class="contact-email">camryn@premiummediafl.com</a>
       <p class="contact-sub">Always down for a good project, a fun collab, or just talking shop.</p>
+      <!-- TODO: add Instagram handle, then restore:
       <div class="social-row">
-        <a href="#" class="social-link">Follow me on Instagram</a>
+        <a href="https://www.instagram.com/HANDLE/" target="_blank" rel="noopener" class="social-link">Follow me on Instagram<span class="sr-only"> (opens in new tab)</span></a>
       </div>
+      -->
     </div>
   </div>
-  <svg class="deco-leaf" width="340" height="340" viewBox="0 0 300 300" fill="none">
+  <svg class="deco-leaf" aria-hidden="true" focusable="false" width="340" height="340" viewBox="0 0 300 300" fill="none">
     <path d="M280 280 C200 200 100 180 20 20 C20 20 180 60 280 280Z" fill="#2A3D2E"/>
   </svg>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -318,8 +369,13 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Nav: go light on dark backgrounds
+// Nav: solid background once the page scrolls, so links don't sit on top of content
 const nav = document.getElementById('mainNav');
+const setScrolled = () => nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+setScrolled();
+window.addEventListener('scroll', setScrolled, { passive: true });
+
+// Nav: go light on dark backgrounds
 const darkSections = document.querySelectorAll('#about');
 
 const navObserver = new IntersectionObserver(entries => {
@@ -347,13 +403,20 @@ navToggle.addEventListener('click', () => {
   document.body.classList.toggle('nav-locked', isOpen);
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('nav-open');
-    navToggle.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', false);
-    document.body.classList.remove('nav-locked');
-  });
+function closeNav() {
+  navLinks.classList.remove('nav-open');
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', false);
+  document.body.classList.remove('nav-locked');
+}
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+
+// Escape closes the mobile menu and returns focus to the toggle
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && navLinks.classList.contains('nav-open')) {
+    closeNav();
+    navToggle.focus();
+  }
 });
 </script>
 </body>
