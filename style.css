@@ -8,6 +8,7 @@
   --honey: #C8943A;
   --honey-text: #7E5F20;
   --honey-light: #E8B86D;
+  --honey-deep: #A07326; /* honey for large text on cream: 3.8:1 */
   --petal: #D4A5A5;
   --ink: #1C2419;
   --mist: rgba(42,61,46,0.06);
@@ -43,6 +44,31 @@ body.nav-locked { overflow: hidden; }
 .skip-nav:focus {
   top: 0;
 }
+main:focus { outline: none; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--honey-deep);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+#about a:focus-visible,
+nav.nav-light a:focus-visible,
+nav.nav-light button:focus-visible,
+.nav-links.nav-open a:focus-visible,
+footer a:focus-visible { outline-color: var(--honey-light); }
+.work-card:focus-visible { outline-offset: 3px; border-radius: 16px; }
 
 body::before {
   content: '';
@@ -140,21 +166,23 @@ nav {
 .nav-toggle.is-open .toggle-stem {
   opacity: 0;
 }
-.nav-toggle.is-open .toggle-leaf--left {
-  d: path("M8 8 L24 24");
+.nav-toggle.is-open .toggle-leaf {
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
   opacity: 1;
 }
-.nav-toggle.is-open .toggle-leaf--right {
-  d: path("M24 8 L8 24");
-  opacity: 1;
-}
+.nav-toggle.is-open .toggle-leaf--left  { d: path("M8 8 L24 24"); }
+.nav-toggle.is-open .toggle-leaf--right { d: path("M24 8 L8 24"); }
 
-/* Fallback X for browsers that don't animate d */
-.nav-toggle.is-open .toggle-leaf--left {
-  transform: translate(-3px, -4px) rotate(45deg) scaleX(2.2) scaleY(0.3);
-}
-.nav-toggle.is-open .toggle-leaf--right {
-  transform: translate(3px, 4px) rotate(-45deg) scaleX(2.2) scaleY(0.3);
+/* Fallback X for browsers that don't support the CSS d property (Safari) */
+@supports not (d: path("M0 0")) {
+  .nav-toggle.is-open .toggle-leaf--left {
+    transform: translate(-3px, -4px) rotate(45deg) scaleX(2.2) scaleY(0.3);
+  }
+  .nav-toggle.is-open .toggle-leaf--right {
+    transform: translate(3px, 4px) rotate(-45deg) scaleX(2.2) scaleY(0.3);
+  }
 }
 
 /* Nav light mode adjustments for toggle */
@@ -212,7 +240,7 @@ nav.nav-light .nav-toggle { color: var(--cream); }
   opacity: 0;
   animation: fadeUp 0.9s 0.35s ease forwards;
 }
-.hero-name em { font-style: italic; color: var(--honey); }
+.hero-name em { font-style: italic; color: var(--honey-deep); }
 
 .hero-tagline {
   font-size: 1.05rem;
@@ -242,8 +270,10 @@ nav.nav-light .nav-toggle { color: var(--cream); }
   opacity: 0;
   animation: fadeUp 0.9s 0.65s ease forwards;
 }
-.hero-cta:hover {
-  background: var(--honey);
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  background: var(--honey-light);
+  color: var(--forest);
   transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(200,148,58,0.3);
 }
@@ -260,11 +290,24 @@ nav.nav-light .nav-toggle { color: var(--cream); }
 }
 .botanical-art { width: 100%; max-width: 420px; }
 
-/* Nav light mode (over dark sections) */
-nav.nav-light {
-  background: rgba(42,61,46,0.92);
+/* Nav backgrounds — drawn on ::before so the fixed mobile overlay isn't trapped by backdrop-filter */
+nav { transition: padding 0.3s ease; }
+nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(247,243,236,0.9);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(42,61,46,0.08);
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
 }
+nav.nav-scrolled { padding-top: 18px; padding-bottom: 18px; }
+nav.nav-scrolled::before { opacity: 1; }
+/* Nav light mode (over dark sections) */
+nav.nav-light::before { opacity: 1; background: rgba(42,61,46,0.92); box-shadow: none; }
 nav.nav-light .nav-logo { color: var(--cream); }
 nav.nav-light .nav-links a { color: var(--cream); }
 nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
@@ -298,7 +341,7 @@ nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
   letter-spacing: -0.02em;
   color: var(--forest);
 }
-.section-heading em { font-style: italic; color: var(--honey); }
+.section-heading em { font-style: italic; color: var(--honey-deep); }
 
 /* ABOUT */
 #about {
@@ -409,7 +452,12 @@ nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
   gap: 80px;
   align-items: start;
 }
-.project-entry:last-child { border-bottom: 1px solid rgba(42,61,46,0.13); }
+.projects-more {
+  border-top: 1px solid rgba(42,61,46,0.13);
+  padding-top: 64px;
+  text-align: center;
+}
+.projects-more .hero-cta { opacity: 1; animation: none; }
 
 .project-meta { position: sticky; top: 120px; }
 
@@ -456,7 +504,7 @@ nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
   padding-bottom: 3px;
   transition: color 0.2s, border-color 0.2s;
 }
-.project-link-btn:hover { color: var(--honey); border-color: var(--honey); }
+.project-link-btn:hover { color: var(--honey-text); border-color: var(--honey-text); }
 
 .project-visual {
   width: 100%;
@@ -519,6 +567,8 @@ nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
 .contact-inner { max-width: 660px; }
 
 .contact-email {
+  overflow-wrap: anywhere;
+  max-width: 100%;
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 300;
@@ -532,7 +582,7 @@ nav.nav-light .nav-links a:hover { opacity: 1; color: var(--honey-light); }
   border-bottom: 1px solid transparent;
   width: fit-content;
 }
-.contact-email:hover { color: var(--honey); border-color: var(--honey); }
+.contact-email:hover { color: var(--honey-deep); border-color: var(--honey-deep); }
 
 .contact-sub {
   font-size: 0.9rem;
@@ -816,25 +866,10 @@ footer a:hover { color: var(--honey-light); }
   transition: color 0.2s, border-color 0.2s;
 }
 .work-card:hover .card-link {
-  color: var(--honey);
-  border-color: var(--honey);
+  color: var(--honey-text);
+  border-color: var(--honey-text);
 }
 
-/* Empty state */
-.empty-state {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 80px 20px;
-  display: none;
-}
-.empty-state.visible { display: block; }
-.empty-state p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--moss);
-}
 
 /* Nav active state */
 .nav-links a.active { opacity: 1; }
@@ -854,7 +889,6 @@ footer a:hover { color: var(--honey-light); }
 @media (max-width: 860px) {
   .work-header { padding: 120px 0 60px; }
   .work-header-inner { flex-direction: column; align-items: flex-start; }
-  .filter-bar { margin-top: 8px; }
 }
 @media (max-width: 560px) {
   .work-grid { grid-template-columns: 1fr; }
@@ -862,15 +896,15 @@ footer a:hover { color: var(--honey-light); }
 
 /* Accessibility badge — stands out across all cards */
 .card-tag--acc {
-  color: var(--honey);
-  border-color: var(--honey);
+  color: var(--honey-text);
+  border-color: var(--honey-text);
   font-weight: 500;
 }
 
 /* Accessibility badge — index project tags */
 .project-tag--acc {
-  color: var(--honey);
-  border-color: var(--honey);
+  color: var(--honey-text);
+  border-color: var(--honey-text);
   font-weight: 500;
 }
 
@@ -919,6 +953,7 @@ a.device-laptop--link {
 
 .laptop-screen img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -986,6 +1021,7 @@ a.device-laptop--link {
 
 .phone-screen img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -1047,4 +1083,22 @@ a.device-laptop--link {
   .cursor-ring {
     display: none;
   }
+}
+
+/* ==============================
+   REDUCED MOTION
+   ============================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .cursor-dot, .cursor-ring { display: none; }
+  .project-entry:hover .project-visual-inner,
+  .work-card:hover .card-thumb-inner,
+  .work-card:hover { transform: none; }
 }

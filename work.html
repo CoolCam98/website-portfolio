@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work — Camryn Hatch</title>
+<title>Web Design Portfolio — Camryn Hatch, Plant City, FL</title>
+<meta name="description" content="Websites Camryn Hatch has designed and built for Tampa Bay businesses, including Southern Heat &amp; AC, Premium Media FL, Audrey's Style Bar, and Plant City Event Rentals.">
+<link rel="canonical" href="https://camrynhatch.com/work.html">
+<meta name="theme-color" content="#2A3D2E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://camrynhatch.com/work.html">
+<meta property="og:title" content="Web Design Portfolio — Camryn Hatch">
+<meta property="og:description" content="Websites built for Tampa Bay businesses and side projects.">
+<meta property="og:image" content="https://camrynhatch.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,13 +26,13 @@
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<a href="#workGrid" class="skip-nav">Skip to content</a>
+<a href="#main" class="skip-nav">Skip to content</a>
 
 <!-- NAV -->
-<nav>
+<nav id="mainNav">
   <a href="index.html" class="nav-logo">Camryn Hatch</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <svg class="nav-toggle-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="nav-toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Stem -->
       <line class="toggle-stem" x1="16" y1="6" x2="16" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       <!-- Left leaf -->
@@ -29,10 +43,12 @@
   </button>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html#about">About</a></li>
-    <li><a href="work.html" class="active">All Projects</a></li>
+    <li><a href="work.html" class="active" aria-current="page">All Projects</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
+
+<main id="main" tabindex="-1">
 
 <!-- PAGE HEADER -->
 <section class="work-header">
@@ -42,7 +58,7 @@
       <div class="work-header-text reveal">
         <p class="eyebrow">Portfolio</p>
         <h1 class="section-heading">All my <em>work.</em></h1>
-        <p class="work-count" id="workCount">6 projects</p>
+        <p class="work-count" id="workCount"></p>
       </div>
     </div>
   </div>
@@ -54,20 +70,20 @@
     <div class="work-grid" id="workGrid">
 
       <!-- 505 Party -->
-      <a href="https://505party.com/" target="_blank" class="work-card reveal">
+      <a href="https://505party.com/" target="_blank" rel="noopener" class="work-card reveal">
         <div class="card-thumb" style="background: linear-gradient(135deg, #1a1a2e 0%, #3d2b1f 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/505-pc.png" alt="505 Party desktop view" loading="lazy">
+                  <img src="assets/screenshots/505-pc.webp" width="1200" height="750" alt="505 Party desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/505-phone.png" alt="505 Party mobile view" loading="lazy">
+                  <img src="assets/screenshots/505-phone.webp" width="375" height="812" alt="505 Party mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -77,30 +93,30 @@
           <div class="card-tags">
             <span class="card-tag">Just for fun</span>
           </div>
-          <div class="card-name">505 Party</div>
+          <h2 class="card-name">505 Party</h2>
           <p class="card-desc">We love hosting parties, and this one got its own website. Guests got a mailed invitation with a password hint and had to solve it to unlock the details. The site was part of the party.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
       <!-- LED 62 -->
-      <a href="https://led62.com/" target="_blank" class="work-card reveal reveal-d1">
+      <a href="https://led62.com/" target="_blank" rel="noopener" class="work-card reveal reveal-d1">
         <div class="card-thumb" style="background: linear-gradient(135deg, #c9d6ff 0%, #e2d9f3 50%, #ffd6e7 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/led62-pc.png" alt="LED 62 desktop view" loading="lazy">
+                  <img src="assets/screenshots/led62-pc.webp" width="1200" height="750" alt="LED 62 desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/led62-phone.png" alt="LED 62 mobile view" loading="lazy">
+                  <img src="assets/screenshots/led62-phone.webp" width="375" height="812" alt="LED 62 mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -110,30 +126,30 @@
           <div class="card-tags">
             <span class="card-tag">My baby</span>
           </div>
-          <div class="card-name">LED 62 — Lumi Lights</div>
+          <h2 class="card-name">LED 62 — Lumi Lights</h2>
           <p class="card-desc">My own business. I design and make custom acrylic LED night lights and sell them at comic conventions. Dreamy, anime-inspired, built entirely by me.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
       <!-- Southern Heat & AC -->
-      <a href="https://southernheatandac.com/" target="_blank" class="work-card reveal reveal-d2">
+      <a href="https://southernheatandac.com/" target="_blank" rel="noopener" class="work-card reveal reveal-d2">
         <div class="card-thumb" style="background: linear-gradient(135deg, #1c3a5e 0%, #2d6a9f 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/southern-pc.png" alt="Southern Heat & AC desktop view" loading="lazy">
+                  <img src="assets/screenshots/southern-pc.webp" width="1200" height="750" alt="Southern Heat & AC desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/southern-phone.png" alt="Southern Heat & AC mobile view" loading="lazy">
+                  <img src="assets/screenshots/southern-phone.webp" width="375" height="812" alt="Southern Heat & AC mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -143,30 +159,30 @@
           <div class="card-tags">
             <span class="card-tag">Local love</span>
           </div>
-          <div class="card-name">Southern Heat &amp; AC</div>
+          <h2 class="card-name">Southern Heat &amp; AC</h2>
           <p class="card-desc">Local HVAC company that's now ranking for AC repair in their area and seeing a real boost in calls. The power of good SEO — no ads, just showing up organically.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
       <!-- Plant City Event Rentals -->
-      <a href="https://plantcityeventrentals.com/" target="_blank" class="work-card reveal">
+      <a href="https://plantcityeventrentals.com/" target="_blank" rel="noopener" class="work-card reveal">
         <div class="card-thumb" style="background: linear-gradient(135deg, #2d4a22 0%, #6b8f3a 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/event-pc.png" alt="Plant City Event Rentals desktop view" loading="lazy">
+                  <img src="assets/screenshots/event-pc.webp" width="1200" height="750" alt="Plant City Event Rentals desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/event-phone.png" alt="Plant City Event Rentals mobile view" loading="lazy">
+                  <img src="assets/screenshots/event-phone.webp" width="375" height="812" alt="Plant City Event Rentals mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -176,30 +192,30 @@
           <div class="card-tags">
             <span class="card-tag">Local love</span>
           </div>
-          <div class="card-name">Plant City Event Rentals</div>
+          <h2 class="card-name">Plant City Event Rentals</h2>
           <p class="card-desc">A local photo booth rental company. Built to show off their packages and make the whole thing feel fun and enticing.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
       <!-- Premium Media FL -->
-      <a href="https://premiummediafl.com/" target="_blank" class="work-card reveal reveal-d1">
+      <a href="https://premiummediafl.com/" target="_blank" rel="noopener" class="work-card reveal reveal-d1">
         <div class="card-thumb" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 60%, #2d1b4e 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/premium-pc.png" alt="Premium Media FL desktop view" loading="lazy">
+                  <img src="assets/screenshots/premium-pc.webp" width="1200" height="750" alt="Premium Media FL desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/premium-phone.png" alt="Premium Media FL mobile view" loading="lazy">
+                  <img src="assets/screenshots/premium-phone.webp" width="375" height="812" alt="Premium Media FL mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -209,30 +225,30 @@
           <div class="card-tags">
             <span class="card-tag">Close to home</span>
           </div>
-          <div class="card-name">Premium Media FL</div>
+          <h2 class="card-name">Premium Media FL</h2>
           <p class="card-desc">My own agency's site. It's always the hardest to work on your own stuff, but this one has some fun features like an autoplay hero video and a scrolling logo wall.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
       <!-- Audrey's Style Bar -->
-      <a href="https://audreysstylebar.com/" target="_blank" class="work-card reveal reveal-d2">
+      <a href="https://audreysstylebar.com/" target="_blank" rel="noopener" class="work-card reveal reveal-d2">
         <div class="card-thumb" style="background: linear-gradient(135deg, #f5e6ea 0%, #e8c4cf 50%, #d4a0af 100%);">
           <div class="card-thumb-inner">
             <div class="device-mockup-group">
               <div class="device-laptop">
                 <div class="laptop-screen">
-                  <img src="assets/screenshots/audrey-pc.png" alt="Audrey's Style Bar desktop view" loading="lazy">
+                  <img src="assets/screenshots/audrey-pc.webp" width="1200" height="750" alt="Audrey's Style Bar desktop view" loading="lazy">
                 </div>
                 <div class="laptop-base"></div>
               </div>
               <div class="device-phone">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                  <img src="assets/screenshots/audrey-phone.png" alt="Audrey's Style Bar mobile view" loading="lazy">
+                  <img src="assets/screenshots/audrey-phone.webp" width="375" height="812" alt="Audrey's Style Bar mobile view" loading="lazy">
                 </div>
               </div>
             </div>
@@ -242,23 +258,20 @@
           <div class="card-tags">
             <span class="card-tag">Local love</span>
           </div>
-          <div class="card-name">Audrey's Style Bar</div>
+          <h2 class="card-name">Audrey's Style Bar</h2>
           <p class="card-desc">A salon site built to feel classy and elevated — cream, black, and warm gold with little bow details the owner loved. The vibe had to match the experience.</p>
           <span class="card-link">
-            View project
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Visit site<span class="sr-only"> (opens in new tab)</span>
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
       </a>
 
-      <!-- Empty state -->
-      <div class="empty-state" id="emptyState">
-        <p>Nothing here yet — check back soon &#127807;</p>
-      </div>
-
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -268,6 +281,16 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Project count stays in sync with the cards
+  const cardCount = document.querySelectorAll('.work-card').length;
+  document.getElementById('workCount').textContent = cardCount + (cardCount === 1 ? ' project' : ' projects');
+
+  // Solid nav background once scrolled
+  const nav = document.getElementById('mainNav');
+  const setScrolled = () => nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+  setScrolled();
+  window.addEventListener('scroll', setScrolled, { passive: true });
 
   // Cursor
   const dot = document.getElementById('cursorDot');
@@ -285,7 +308,7 @@
     ring.style.top = ry + 'px';
     requestAnimationFrame(animateRing);
   })();
-  document.querySelectorAll('a, .work-card, .filter-btn').forEach(el => {
+  document.querySelectorAll('a, .work-card').forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
   });
@@ -307,13 +330,19 @@
     document.body.classList.toggle('nav-locked', isOpen);
   });
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('nav-open');
-      navToggle.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', false);
-      document.body.classList.remove('nav-locked');
-    });
+  function closeNav() {
+    navLinks.classList.remove('nav-open');
+    navToggle.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', false);
+    document.body.classList.remove('nav-locked');
+  }
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && navLinks.classList.contains('nav-open')) {
+      closeNav();
+      navToggle.focus();
+    }
   });
 </script>
 </body>
